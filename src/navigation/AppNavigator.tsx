@@ -2,8 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, I18nManager } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import { Image, StyleSheet } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import PostAdScreen from '../screens/PostAdScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -35,16 +34,12 @@ const HomeStackNavigator: React.FC = () => {
 };
 
 const AppNavigator: React.FC = () => {
-  const { t } = useTranslation();
-  const isRTL = I18nManager.isRTL;
-
   return (
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarActiveTintColor: '#007bff',
-          tabBarInactiveTintColor: '#999',
+          tabBarShowLabel: false,
           tabBarStyle: {
             borderTopWidth: 1,
             borderTopColor: '#e0e0e0',
@@ -52,19 +47,18 @@ const AppNavigator: React.FC = () => {
             paddingTop: 5,
             height: 60,
           },
-          tabBarLabelStyle: {
-            fontSize: 12,
-            fontWeight: '600',
-          },
         }}
       >
         <Tab.Screen
           name="HomeStack"
           component={HomeStackNavigator}
           options={{
-            tabBarLabel: t('navigation.home'),
-            tabBarIcon: ({ color }) => (
-              <Text style={{ fontSize: 24, color }}>🏠</Text>
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={require('../../assets/images/home.png')}
+                style={[styles.homeIcon, { opacity: focused ? 1 : 0.6 }]}
+                resizeMode="contain"
+              />
             ),
           }}
         />
@@ -72,9 +66,12 @@ const AppNavigator: React.FC = () => {
           name="Settings"
           component={SettingsScreen}
           options={{
-            tabBarLabel: t('navigation.settings'),
-            tabBarIcon: ({ color }) => (
-              <Text style={{ fontSize: 24, color }}>⚙️</Text>
+            tabBarIcon: ({ focused }) => (
+              <Image
+                source={require('../../assets/images/settings.png')}
+                style={[styles.settingsIcon, { opacity: focused ? 1 : 0.6 }]}
+                resizeMode="contain"
+              />
             ),
           }}
         />
@@ -82,5 +79,16 @@ const AppNavigator: React.FC = () => {
     </NavigationContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  homeIcon: {
+    width: 45,
+    height: 45,
+  },
+  settingsIcon: {
+    width: 27,
+    height: 27,
+  },
+});
 
 export default AppNavigator;

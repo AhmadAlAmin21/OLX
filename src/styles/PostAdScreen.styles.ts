@@ -3,27 +3,10 @@ import { globalStyles } from './globalStyles';
 
 export const styles = StyleSheet.create({
   container: globalStyles.container,
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-  },
-  backButton: {
-    fontSize: 16,
-    color: '#007bff',
-    fontWeight: '600',
-  },
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#333',
-  },
-  placeholder: {
-    width: 60,
   },
   content: {
     flex: 1,

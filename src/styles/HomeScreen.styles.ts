@@ -3,15 +3,6 @@ import { globalStyles } from './globalStyles';
 
 export const styles = StyleSheet.create({
   container: globalStyles.container,
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 16,
-    backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-  },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -41,10 +32,12 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#333',
     marginBottom: 8,
+    textAlign: 'left',
   },
   subtitle: {
     fontSize: 16,
     color: '#666',
+    textAlign: 'left',
   },
   placeholder: {
     padding: 40,

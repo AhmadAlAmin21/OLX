@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '../navigation/AppNavigator';
+import ScreenHeader from '../components/ScreenHeader';
 import { styles } from '../styles/PostAdScreen.styles';
 
 type PostAdScreenNavigationProp = NativeStackNavigationProp<
@@ -46,18 +47,11 @@ const PostAdScreen: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View
-        style={[
-          styles.header,
-          { flexDirection: isRTL ? 'row-reverse' : 'row' },
-        ]}
-      >
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Text style={styles.backButton}>{t('common.back')}</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>{t('postAd.headerTitle')}</Text>
-        <View style={styles.placeholder} />
-      </View>
+      <ScreenHeader
+        title={t('postAd.headerTitle')}
+        showBackButton={true}
+        titleStyle={styles.headerTitle}
+      />
       <ScrollView style={styles.content}>
         <View style={styles.form}>
           <View style={styles.inputGroup}>
