@@ -1,0 +1,46 @@
+{
+  "common": {
+    "back": "← Back",
+    "ok": "OK",
+    "error": "Error",
+    "success": "Success"
+  },
+  "navigation": {
+    "home": "Home",
+    "settings": "Settings"
+  },
+  "home": {
+    "title": "OLX",
+    "postAd": "Post Ad",
+    "welcome": "Welcome to OLX",
+    "subtitle": "Browse and discover amazing deals",
+    "placeholder": "Your ads will appear here"
+  },
+  "postAd": {
+    "headerTitle": "Post an Ad",
+    "title": "Title",
+    "titleRequired": "Title *",
+    "titlePlaceholder": "Enter ad title",
+    "category": "Category",
+    "categoryPlaceholder": "e.g., Electronics, Cars, Furniture",
+    "description": "Description",
+    "descriptionRequired": "Description *",
+    "descriptionPlaceholder": "Describe your item...",
+    "price": "Price",
+    "priceRequired": "Price *",
+    "pricePlaceholder": "Enter price",
+    "submit": "Post Ad",
+    "errorRequired": "Please fill in all required fields",
+    "successMessage": "Your ad has been posted!"
+  },
+  "settings": {
+    "title": "Settings",
+    "preferences": "Preferences",
+    "language": "Language",
+    "languageDescription": "Select your preferred language",
+    "english": "English",
+    "arabic": "Arabic",
+    "changeLanguage": "Change Language",
+    "restartRequired": "Please restart the app for RTL/LTR changes to take effect"
+  }
+}

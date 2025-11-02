@@ -1,0 +1,46 @@
+{
+  "common": {
+    "back": "رجوع ←",
+    "ok": "موافق",
+    "error": "خطأ",
+    "success": "نجاح"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "settings": "الإعدادات"
+  },
+  "home": {
+    "title": "OLX",
+    "postAd": "نشر إعلان",
+    "welcome": "مرحباً بك في OLX",
+    "subtitle": "تصفح واكتشف عروضاً رائعة",
+    "placeholder": "ستظهر إعلاناتك هنا"
+  },
+  "postAd": {
+    "headerTitle": "نشر إعلان",
+    "title": "العنوان",
+    "titleRequired": "العنوان *",
+    "titlePlaceholder": "أدخل عنوان الإعلان",
+    "category": "الفئة",
+    "categoryPlaceholder": "مثال: إلكترونيات، سيارات، أثاث",
+    "description": "الوصف",
+    "descriptionRequired": "الوصف *",
+    "descriptionPlaceholder": "وصف العنصر الخاص بك...",
+    "price": "السعر",
+    "priceRequired": "السعر *",
+    "pricePlaceholder": "أدخل السعر",
+    "submit": "نشر الإعلان",
+    "errorRequired": "يرجى ملء جميع الحقول المطلوبة",
+    "successMessage": "تم نشر إعلانك بنجاح!"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "preferences": "التفضيلات",
+    "language": "اللغة",
+    "languageDescription": "اختر اللغة المفضلة لديك",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "changeLanguage": "تغيير اللغة",
+    "restartRequired": "يرجى إعادة تشغيل التطبيق حتى تأتي تغييرات RTL/LTR حيز التنفيذ"
+  }
+}

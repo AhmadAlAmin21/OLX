@@ -2,7 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text } from 'react-native';
+import { Text, I18nManager } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import HomeScreen from '../screens/HomeScreen';
 import PostAdScreen from '../screens/PostAdScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -34,6 +35,9 @@ const HomeStackNavigator: React.FC = () => {
 };
 
 const AppNavigator: React.FC = () => {
+  const { t } = useTranslation();
+  const isRTL = I18nManager.isRTL;
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -58,7 +62,7 @@ const AppNavigator: React.FC = () => {
           name="HomeStack"
           component={HomeStackNavigator}
           options={{
-            tabBarLabel: 'Home',
+            tabBarLabel: t('navigation.home'),
             tabBarIcon: ({ color }) => (
               <Text style={{ fontSize: 24, color }}>🏠</Text>
             ),
@@ -68,7 +72,7 @@ const AppNavigator: React.FC = () => {
           name="Settings"
           component={SettingsScreen}
           options={{
-            tabBarLabel: 'Settings',
+            tabBarLabel: t('navigation.settings'),
             tabBarIcon: ({ color }) => (
               <Text style={{ fontSize: 24, color }}>⚙️</Text>
             ),
