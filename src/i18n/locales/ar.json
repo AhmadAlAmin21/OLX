@@ -28,6 +28,8 @@
     "titlePlaceholder": "أدخل عنوان الإعلان",
     "category": "الفئة",
     "categoryPlaceholder": "مثال: إلكترونيات، سيارات، أثاث",
+    "selectCategory": "اختر فئة",
+    "selectCategoryFirst": "يرجى اختيار فئة أولاً",
     "description": "الوصف",
     "descriptionRequired": "الوصف *",
     "descriptionPlaceholder": "وصف العنصر الخاص بك...",
@@ -36,7 +38,9 @@
     "pricePlaceholder": "أدخل السعر",
     "submit": "نشر الإعلان",
     "errorRequired": "يرجى ملء جميع الحقول المطلوبة",
-    "successMessage": "تم نشر إعلانك بنجاح!"
+    "successMessage": "تم نشر إعلانك بنجاح!",
+    "loadingFields": "جاري تحميل حقول النموذج...",
+    "noFieldsAvailable": "لا توجد حقول متاحة لهذه الفئة"
   },
   "settings": {
     "title": "الإعدادات",

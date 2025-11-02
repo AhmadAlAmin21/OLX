@@ -28,6 +28,8 @@
     "titlePlaceholder": "Enter ad title",
     "category": "Category",
     "categoryPlaceholder": "e.g., Electronics, Cars, Furniture",
+    "selectCategory": "Select a category",
+    "selectCategoryFirst": "Please select a category first",
     "description": "Description",
     "descriptionRequired": "Description *",
     "descriptionPlaceholder": "Describe your item...",
@@ -36,7 +38,9 @@
     "pricePlaceholder": "Enter price",
     "submit": "Post Ad",
     "errorRequired": "Please fill in all required fields",
-    "successMessage": "Your ad has been posted!"
+    "successMessage": "Your ad has been posted!",
+    "loadingFields": "Loading form fields...",
+    "noFieldsAvailable": "No fields available for this category"
   },
   "settings": {
     "title": "Settings",

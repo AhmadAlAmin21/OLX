@@ -55,13 +55,13 @@ const ScreenHeader: React.FC<ScreenHeaderProps> = ({
   const hasRight = !!rightElement;
 
   // Determine title alignment based on what elements exist
-  const titleAlignment: 'left' | 'center' | 'right' =
+  const titleAlignment: 'left' | 'center' =
     hasLeft && hasRight
       ? 'center'
       : hasRight
       ? 'left'
       : hasLeft
-      ? 'right'
+      ? 'center'
       : 'left';
 
   return (
@@ -82,12 +82,7 @@ const ScreenHeader: React.FC<ScreenHeaderProps> = ({
         style={[
           styles.centerContainer,
           {
-            alignItems:
-              titleAlignment === 'center'
-                ? 'center'
-                : titleAlignment === 'right'
-                ? 'flex-end'
-                : 'flex-start',
+            alignItems: titleAlignment === 'center' ? 'center' : 'flex-start',
           },
         ]}
       >
