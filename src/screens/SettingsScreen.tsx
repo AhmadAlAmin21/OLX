@@ -5,7 +5,6 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
-  Alert,
   I18nManager,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
@@ -33,24 +32,12 @@ const SettingsScreen: React.FC = () => {
     }
 
     setShowLanguageModal(false);
-
-    Alert.alert(t('settings.changeLanguage'), t('settings.restartRequired'), [
-      {
-        text: t('common.ok'),
-        onPress: async () => {
-          await changeLanguage(lang);
-          setSelectedLanguage(lang);
-          // Restart app after a short delay to ensure language is saved
-          setTimeout(() => {
-            RNRestart.restart();
-          }, 100);
-        },
-      },
-      {
-        text: t('common.back'),
-        style: 'cancel',
-      },
-    ]);
+    await changeLanguage(lang);
+    setSelectedLanguage(lang);
+    // Restart app after a short delay to ensure language is saved
+    setTimeout(() => {
+      RNRestart.restart();
+    }, 100);
   };
 
   const getLanguageLabel = (lang: string) => {
@@ -90,7 +77,9 @@ const SettingsScreen: React.FC = () => {
               </Text>
             </View>
             <Text style={styles.settingValue}>
-              {getLanguageLabel(selectedLanguage)} ›
+              {isRTL ? '‹ ' : ''}
+              {getLanguageLabel(selectedLanguage)}
+              {!isRTL ? ' ›' : ''}
             </Text>
           </TouchableOpacity>
         </View>
