@@ -14,7 +14,12 @@
     "postAd": "Post Ad",
     "welcome": "Welcome to OLX",
     "subtitle": "Browse and discover amazing deals",
-    "placeholder": "Your ads will appear here"
+    "placeholder": "Your ads will appear here",
+    "loading": "Loading categories...",
+    "subcategories": "subcategories",
+    "noCategories": "No categories available",
+    "allCategories": "All Categories",
+    "moreIn": "More in {{category}}"
   },
   "postAd": {
     "headerTitle": "Post an Ad",

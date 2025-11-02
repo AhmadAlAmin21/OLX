@@ -14,7 +14,12 @@
     "postAd": "نشر إعلان",
     "welcome": "مرحباً بك في OLX",
     "subtitle": "تصفح واكتشف عروضاً رائعة",
-    "placeholder": "ستظهر إعلاناتك هنا"
+    "placeholder": "ستظهر إعلاناتك هنا",
+    "loading": "جاري تحميل الفئات...",
+    "subcategories": "فئات فرعية",
+    "noCategories": "لا توجد فئات متاحة",
+    "allCategories": "جميع الفئات",
+    "moreIn": "المزيد في {{category}}"
   },
   "postAd": {
     "headerTitle": "نشر إعلان",
