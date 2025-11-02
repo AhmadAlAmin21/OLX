@@ -61,4 +61,41 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     color: '#999',
   },
+  bottomSheetContent: {
+    flex: 1,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+  },
+  bottomSheetTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 16,
+  },
+  languageOption: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingVertical: 16,
+    paddingHorizontal: 12,
+    borderRadius: 8,
+    marginBottom: 8,
+    backgroundColor: '#f5f5f5',
+  },
+  languageOptionSelected: {
+    backgroundColor: '#e3f2fd',
+  },
+  languageOptionText: {
+    fontSize: 16,
+    color: '#333',
+  },
+  languageOptionTextSelected: {
+    color: '#1976d2',
+    fontWeight: '600',
+  },
+  checkmark: {
+    fontSize: 18,
+    color: '#1976d2',
+    fontWeight: 'bold',
+  },
 });
