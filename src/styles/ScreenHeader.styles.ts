@@ -7,8 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)',
+    minHeight: 70,
   },
   leftContainer: {
     minWidth: 60,
