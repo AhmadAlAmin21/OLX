@@ -44,8 +44,7 @@ const AppNavigator: React.FC = () => {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            borderTopWidth: 1,
-            borderTopColor: '#e0e0e0',
+            boxShadow: '0 -2px 4px rgba(0, 0, 0, 0.05)',
             paddingBottom: 5,
             paddingTop: 5,
             height: 60,
