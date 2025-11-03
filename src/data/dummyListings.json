@@ -1,0 +1,62 @@
+[
+  {
+    "id": "car1",
+    "imageUrl": "https://images.unsplash.com/photo-1617531653332-bd46c24f2068",
+    "price": 49500,
+    "currency": "USD",
+    "title": "Mercedes GLC-Class 2019 Coupe - Full clean car fax",
+    "make": "Mercedes",
+    "model": "GLC-Class",
+    "year": 2019,
+    "mileage": 64000,
+    "mileageUnit": "km",
+    "location": "Sin El Fil, Metn",
+    "postedAgo": "23 hours ago",
+    "isFavorite": false
+  },
+  {
+    "id": "car2",
+    "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2",
+    "price": 13900,
+    "currency": "USD",
+    "title": "Hyundai Tucson 2016",
+    "make": "Hyundai",
+    "model": "Tucson",
+    "year": 2016,
+    "mileage": 80000,
+    "mileageUnit": "km",
+    "location": "Khaldeh, Aley",
+    "postedAgo": "2 days ago",
+    "isFavorite": false
+  },
+  {
+    "id": "car3",
+    "imageUrl": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1",
+    "price": 13800,
+    "currency": "USD",
+    "title": "Nissan Kicks 2019 For Sale !!!",
+    "make": "Nissan",
+    "model": "Kicks",
+    "year": 2019,
+    "mileage": 88500,
+    "mileageUnit": "km",
+    "location": "Sahel Alma, Keserouan",
+    "postedAgo": "4 days ago",
+    "isFavorite": false
+  },
+  {
+    "id": "car4",
+    "imageUrl": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1",
+    "price": 46000,
+    "currency": "USD",
+    "title": "Mercedes-Benz GLC-250 2019",
+    "make": "Mercedes-Benz",
+    "model": "GLC-250",
+    "year": 2019,
+    "mileage": 69000,
+    "mileageUnit": "km",
+    "location": "Ras Al Nabaa, Beirut",
+    "postedAgo": "21 hours ago",
+    "isFavorite": false
+  }
+]

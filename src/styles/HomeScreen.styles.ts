@@ -152,7 +152,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   categoryListContent: {
-    paddingLeft: 0,
+    paddingRight: 16,
+    paddingVertical: 8,
+  },
+  listingsListContent: {
     paddingRight: 16,
     paddingVertical: 8,
   },
@@ -173,5 +176,10 @@ export const styles = StyleSheet.create({
   },
   moreInSection: {
     marginTop: 8,
+  },
+  viewAllText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#007bff',
   },
 });

@@ -5,11 +5,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet } from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import PostAdScreen from '../screens/PostAdScreen';
+import ViewAllScreen from '../screens/ViewAllScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 export type HomeStackParamList = {
   Home: undefined;
   PostAd: undefined;
+  ViewAll: { categoryId?: number; categoryName?: string };
 };
 
 export type RootTabParamList = {
@@ -29,6 +31,7 @@ const HomeStackNavigator: React.FC = () => {
     >
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen name="PostAd" component={PostAdScreen} />
+      <HomeStack.Screen name="ViewAll" component={ViewAllScreen} />
     </HomeStack.Navigator>
   );
 };

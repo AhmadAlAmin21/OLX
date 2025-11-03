@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -14,11 +14,13 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { HomeStackParamList } from '../navigation/AppNavigator';
 import ScreenHeader from '../components/ScreenHeader';
 import CategoryItem from '../components/CategoryItem';
+import ItemCard, { ListingItem } from '../components/ItemCard';
 import SectionHeader from '../components/SectionHeader';
 import { styles } from '../styles/HomeScreen.styles';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { fetchCategories } from '../store/slices/categoriesSlice';
 import { Category } from '../services/categoriesService';
+import dummyListings from '../data/dummyListings.json';
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<
   HomeStackParamList,
@@ -32,6 +34,7 @@ const HomeScreen: React.FC = () => {
   const { categories, loading, error } = useAppSelector(
     state => state.categories,
   );
+  const [listings] = useState<ListingItem[]>(dummyListings as ListingItem[]);
 
   const currentLanguage = i18n.language || 'en';
 
@@ -46,6 +49,8 @@ const HomeScreen: React.FC = () => {
   const topLevelCategories = [...categories]
     .filter(category => category.level === 0)
     .sort((a, b) => a.displayPriority - b.displayPriority);
+
+  const category1 = categories.find(cat => cat.id === 1);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -99,6 +104,48 @@ const HomeScreen: React.FC = () => {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={styles.categoryListContent}
             />
+
+            {/* Category 1 Listings Section */}
+            {category1 && listings.length > 0 && (
+              <>
+                <SectionHeader
+                  title={getCategoryName(category1)}
+                  isFirst={false}
+                  rightComponent={
+                    <TouchableOpacity
+                      onPress={() => {
+                        navigation.navigate('ViewAll', {
+                          categoryId: category1.id,
+                          categoryName: getCategoryName(category1),
+                        });
+                      }}
+                    >
+                      <Text style={styles.viewAllText}>
+                        {t('home.viewAll', 'View All')}
+                      </Text>
+                    </TouchableOpacity>
+                  }
+                />
+                <FlatList
+                  data={listings}
+                  renderItem={({ item }) => (
+                    <ItemCard
+                      item={item}
+                      onPress={() => {
+                        // Handle item press
+                      }}
+                      onFavoritePress={() => {
+                        // Handle favorite press
+                      }}
+                    />
+                  )}
+                  keyExtractor={item => item.id}
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={styles.listingsListContent}
+                />
+              </>
+            )}
           </>
         )}
       </ScrollView>
