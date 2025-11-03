@@ -6,6 +6,7 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
+  FlatList,
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
@@ -84,16 +85,20 @@ const HomeScreen: React.FC = () => {
           <>
             {/* All Categories Section */}
             <SectionHeader title={t('home.allCategories')} isFirst />
-            <View style={styles.categoryGrid}>
-              {topLevelCategories.map(category => (
+            <FlatList
+              data={topLevelCategories}
+              renderItem={({ item: category }) => (
                 <CategoryItem
-                  key={category.id}
                   category={category}
                   compact
                   getCategoryName={getCategoryName}
                 />
-              ))}
-            </View>
+              )}
+              keyExtractor={category => category.id.toString()}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.categoryListContent}
+            />
           </>
         )}
       </ScrollView>

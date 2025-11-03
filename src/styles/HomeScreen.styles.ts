@@ -148,7 +148,13 @@ export const styles = StyleSheet.create({
   categoryGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginHorizontal: -6,
+    marginHorizontal: -8,
+    justifyContent: 'flex-start',
+  },
+  categoryListContent: {
+    paddingLeft: 0,
+    paddingRight: 16,
+    paddingVertical: 8,
   },
   compactCategoryItem: {
     flex: 1,
