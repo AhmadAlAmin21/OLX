@@ -8,14 +8,24 @@ export interface ListingItem {
   price: number;
   currency: string;
   title: string;
-  make: string;
-  model: string;
-  year: number;
-  mileage: number;
-  mileageUnit: string;
   location: string;
   postedAgo: string;
   isFavorite: boolean;
+  // Vehicle specific fields
+  make?: string;
+  model?: string;
+  year?: number;
+  mileage?: number;
+  mileageUnit?: string;
+  // Property specific fields
+  bedrooms?: number;
+  bathrooms?: number;
+  area?: number;
+  areaUnit?: string;
+  // Mobile phone specific fields
+  brand?: string;
+  storage?: string;
+  condition?: string;
 }
 
 interface ItemCardProps {
@@ -37,6 +47,29 @@ const ItemCard: React.FC<ItemCardProps> = ({
 
   const formatMileage = (mileage: number, unit: string): string => {
     return `${mileage.toLocaleString()} ${unit}`;
+  };
+
+  const renderDetails = () => {
+    // Property listing
+    if (item.bedrooms !== undefined && item.bathrooms !== undefined) {
+      const areaText = item.area
+        ? ` • ${item.area} ${item.areaUnit || 'sqm'}`
+        : '';
+      return `${item.bedrooms} bed • ${item.bathrooms} bath${areaText}`;
+    }
+    // Vehicle listing
+    if (item.mileage !== undefined && item.year !== undefined) {
+      return `${formatMileage(item.mileage, item.mileageUnit || 'km')} • ${item.year}`;
+    }
+    // Mobile phone listing
+    if (item.brand || item.storage || item.condition) {
+      const parts: string[] = [];
+      if (item.brand) parts.push(item.brand);
+      if (item.storage) parts.push(item.storage);
+      if (item.condition) parts.push(item.condition);
+      return parts.join(' • ');
+    }
+    return '';
   };
 
   return (
@@ -66,10 +99,10 @@ const ItemCard: React.FC<ItemCardProps> = ({
           {item.title}
         </Text>
 
-        {/* Mileage and Year */}
-        <Text style={styles.details}>
-          {formatMileage(item.mileage, item.mileageUnit)} • {item.year}
-        </Text>
+        {/* Details */}
+        {renderDetails() && (
+          <Text style={styles.details}>{renderDetails()}</Text>
+        )}
 
         {/* Location */}
         <Text style={styles.location}>{item.location}</Text>

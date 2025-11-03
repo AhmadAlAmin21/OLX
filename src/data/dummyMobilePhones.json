@@ -1,0 +1,55 @@
+[
+  {
+    "id": "phone1",
+    "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+    "price": 280,
+    "currency": "USD",
+    "title": "mi 13 ultra",
+    "location": "Saida Downtown, Saida",
+    "postedAgo": "3 days ago",
+    "isFavorite": false,
+    "brand": "Xiaomi",
+    "storage": "256GB",
+    "condition": "Used"
+  },
+  {
+    "id": "phone2",
+    "imageUrl": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb",
+    "price": 1675,
+    "currency": "USD",
+    "title": "Samsung Galaxy Z Fold 7 256GB",
+    "location": "Mar Elias, Beirut",
+    "postedAgo": "2 weeks ago",
+    "isFavorite": false,
+    "brand": "Samsung",
+    "storage": "256GB",
+    "condition": "New"
+  },
+  {
+    "id": "phone3",
+    "imageUrl": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab",
+    "price": 815,
+    "currency": "USD",
+    "title": "brand new iPhone 16 not active",
+    "location": "Sanayeh, Beirut",
+    "postedAgo": "2 weeks ago",
+    "isFavorite": false,
+    "brand": "Apple",
+    "storage": "128GB",
+    "condition": "New"
+  },
+  {
+    "id": "phone4",
+    "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+    "price": 699,
+    "currency": "USD",
+    "title": "used iPhone 16 128gb",
+    "location": "Sanayeh, Beirut",
+    "postedAgo": "2 weeks ago",
+    "isFavorite": false,
+    "brand": "Apple",
+    "storage": "128GB",
+    "condition": "Used"
+  }
+]
+

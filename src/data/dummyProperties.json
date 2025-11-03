@@ -1,0 +1,59 @@
+[
+  {
+    "id": "prop1",
+    "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+    "price": 2000,
+    "currency": "USD",
+    "title": "Exclusive-Apartment with Terrace for Rent in Mtayleb",
+    "location": "Mtayleb, Metn",
+    "postedAgo": "5 days ago",
+    "isFavorite": false,
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "area": 330,
+    "areaUnit": "sqm"
+  },
+  {
+    "id": "prop2",
+    "imageUrl": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+    "price": 5000,
+    "currency": "USD",
+    "title": "Apartment for Rent in Koraytem | Fully Renovated | High-End",
+    "location": "Koraytem, Beirut",
+    "postedAgo": "4 days ago",
+    "isFavorite": false,
+    "bedrooms": 4,
+    "bathrooms": 6,
+    "area": 700,
+    "areaUnit": "sqm"
+  },
+  {
+    "id": "prop3",
+    "imageUrl": "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    "price": 600,
+    "currency": "USD",
+    "title": "Apartment for Rent in Jdeideh",
+    "location": "Jdaide, Metn",
+    "postedAgo": "6 days ago",
+    "isFavorite": false,
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "area": 110,
+    "areaUnit": "sqm"
+  },
+  {
+    "id": "prop4",
+    "imageUrl": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfb",
+    "price": 1500,
+    "currency": "USD",
+    "title": "2-Bedroom Apartment in Mar Mikheal",
+    "location": "Mar Mkhayel, Beirut",
+    "postedAgo": "3 weeks ago",
+    "isFavorite": false,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "area": 140,
+    "areaUnit": "sqm"
+  }
+]
+
